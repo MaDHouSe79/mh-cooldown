@@ -61,5 +61,5 @@ AddEventHandler('playerConnecting', onPlayerConnecting)
 
 AddEventHandler('playerDropped', function(reason)
     local playerId = source
-    self.Remove(playerId)
+    Cooldown:Remove(playerId)
 end)
