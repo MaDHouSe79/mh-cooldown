@@ -34,6 +34,7 @@
 - you can implement this in every script, it's a standalone script.
 
 # Example how to use in other scripts.
+- Use this server side
 ```lua
 local cooldownTimer = 5000 -- 5000 = 5secs..
 local function Test(playerId)
@@ -47,3 +48,4 @@ end
 [GPL LICENSE](./LICENSE)<br />
 
 &copy; [MaDHouSe79](https://www.youtube.com/@MaDHouSe79)
+
