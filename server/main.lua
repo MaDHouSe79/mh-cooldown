@@ -25,7 +25,7 @@ function Cooldown:IsActive(playerId)
 end
 
 function Cooldown:Run(playerId, cooldowntimer)
-    self.Add(playerId)
+    Cooldown:Add(playerId)
     Wait(10)
     local timer = SV_Config.MinCooldownTimer
     if type(cooldowntimer) == 'number' then timer = tonumber(cooldowntimer) end
@@ -43,12 +43,12 @@ function Cooldown:Run(playerId, cooldowntimer)
 end
 
 local function IsActive(playerId)
-    return self.IsActive(playerId)
+    return Cooldown:IsActive(playerId)
 end
 exports('IsActive', IsActive)
 
 local function Run(playerId, timer)
-    return self.Run(playerId, timer)
+    return Cooldown:Run(playerId, timer)
 end
 exports('Run', Run)
 

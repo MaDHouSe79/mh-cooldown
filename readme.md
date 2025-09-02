@@ -33,8 +33,7 @@
 - cooldown scripts or actions for players so they can't spam it or use it in a amount of time.
 - you can implement this in every script, it's a standalone script.
 
-# Example how to use in other scripts.
-- Use this server side
+# Example how to use om pther scripts.
 ```lua
 local cooldownTimer = 5000 -- 5000 = 5secs..
 local function Test(playerId)
@@ -46,6 +45,4 @@ end
 
 # LICENSE
 [GPL LICENSE](./LICENSE)<br />
-
 &copy; [MaDHouSe79](https://www.youtube.com/@MaDHouSe79)
-

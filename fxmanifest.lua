@@ -10,12 +10,15 @@ author 'MaDHouSe79'
 description 'MH Cooldown - Use this in other scripts to cooldown any actions or triggers'
 version '1.0.0'
 
-server_only 'yes'
-
-server_scripts {
+shared_scripts {
     '@ox_lib/init.lua',
     'locales/locale.lua',
     'locales/en.lua', -- change this to your own lang file.
+}
+
+server_only 'yes'
+
+server_scripts {
     'config.lua',
     'server/main.lua',
     'server/update.lua',
