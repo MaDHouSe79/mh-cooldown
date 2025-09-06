@@ -1,7 +1,6 @@
 --[[ ===================================================== ]]--
 --[[                 MH Cooldown by MaDHouSe               ]]--
 --[[ ===================================================== ]]--
-
 fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
@@ -14,7 +13,7 @@ server_only 'yes'
 
 server_scripts {
     '@ox_lib/init.lua',
-    'locales/locale.lua',
+    'core/locale.lua',
     'locales/en.lua', -- change this to your own lang file.
     'config.lua',
     'core/server.lua',
