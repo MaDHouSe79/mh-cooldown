@@ -29,7 +29,7 @@
 # My Youtube Channel
 - [Subscribe](https://www.youtube.com/@MaDHouSe79) 
 
-# MH Cooldown
+# MH Cooldown (Server Side)
 - cooldown scripts or actions for players so they can't spam it or use it in a amount of time.
 - you can implement this in every script, it's a standalone script.
 
@@ -47,3 +47,4 @@ end
 [GPL LICENSE](./LICENSE)<br />
 
 &copy; [MaDHouSe79](https://www.youtube.com/@MaDHouSe79)
+
