@@ -16,8 +16,8 @@ server_scripts {
     '@ox_lib/init.lua',
     'locales/locale.lua',
     'locales/en.lua', -- change this to your own lang file.
-    --
     'config.lua',
+    'core/server.lua',
     'server/main.lua',
     'server/update.lua',
 }
