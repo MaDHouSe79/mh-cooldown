@@ -1,4 +1,5 @@
 local Cooldown = {}
+
 Cooldown.Players = {}
 
 local function Notify(playerId, message, type, length)
@@ -7,6 +8,16 @@ local function Notify(playerId, message, type, length)
     else
         print("MH Cooldown - "..message)
     end
+end
+
+local function Run(playerId, timer)
+    self.Players[playerId].timer = timer
+    self.Players[playerId].cooldown = true
+    Notify(playerId, Lang:t('cooldown_active'), "error", timer)
+    SetTimeout(self.Players[playerId].timer, function()
+        self.Players[playerId].cooldown = false
+        self.Players[playerId].timer = nil
+    end)
 end
 
 function Cooldown:Add(playerId)
@@ -20,46 +31,30 @@ function Cooldown:Remove(playerId)
 end
 
 function Cooldown:IsActive(playerId)
-    if not self.Players[playerId] then return false end
+    if self.Players[playerId] == nil then return false end
     return self.Players[playerId].cooldown
 end
 
 function Cooldown:Run(playerId, cooldowntimer)
     Cooldown:Add(playerId)
     Wait(10)
-    local timer = SV_Config.MinCooldownTimer
+    local timer = tonumber(SV_Config.MinCooldownTimer)
     if type(cooldowntimer) == 'number' then timer = tonumber(cooldowntimer) end
     if self.Players[playerId].timer == nil and not self.Players[playerId].cooldown then
-        self.Players[playerId].timer = timer
-        self.Players[playerId].cooldown = true
-        Notify(playerId, Lang:t('cooldown_active'), "error", timer)
-        SetTimeout(self.Players[playerId].timer, function()
-            self.Players[playerId].cooldown = false
-            self.Players[playerId].timer = nil
-        end)
+        Run(playerId, timer)
     elseif self.Players[playerId].timer ~= nil and self.Players[playerId].cooldown then
         return
     end
 end
 
-local function IsActive(playerId)
-    return Cooldown:IsActive(playerId)
-end
+local function IsActive(playerId) return Cooldown:IsActive(playerId) end
 exports('IsActive', IsActive)
 
-local function Run(playerId, timer)
-    return Cooldown:Run(playerId, timer)
-end
+local function Run(playerId, timer) return Cooldown:Run(playerId, timer) end
 exports('Run', Run)
 
-local function onPlayerConnecting(name, _, deferrals)
-    local playerId = source
-    Cooldown:Add(playerId)
-end
-
+local function onPlayerConnecting(name, _, deferrals) Cooldown:Add(source) end
 AddEventHandler('playerConnecting', onPlayerConnecting)
 
-AddEventHandler('playerDropped', function(reason)
-    local playerId = source
-    Cooldown:Remove(playerId)
-end)
+local function playerDropped() Cooldown:Remove(source) end
+AddEventHandler('playerDropped', playerDropped)
