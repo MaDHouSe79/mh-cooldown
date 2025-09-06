@@ -7,7 +7,7 @@ game 'gta5'
 lua54 'yes'
 
 author 'MaDHouSe79'
-description 'MH Cooldown (Server Side) - Use this in other scripts to cooldown any actions or triggers'
+description 'MH Cooldown - Use this in other scripts to cooldown any actions or triggers'
 version '1.0.0'
 
 server_only 'yes'
