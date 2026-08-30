@@ -5,20 +5,20 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/MaDHouSe79/mh-parkingV2/issues">
-    <img src="https://img.shields.io/github/issues/MaDHouSe79/mh-parkingV2"/> 
+  <a href="https://github.com/MaDHouSe79/mh-cooldown/issues">
+    <img src="https://img.shields.io/github/issues/MaDHouSe79/mh-cooldown"/> 
   </a>
-  <a href="https://github.com/MaDHouSe79/mh-parkingV2/watchers">
-    <img src="https://img.shields.io/github/watchers/MaDHouSe79/mh-parkingV2"/> 
+  <a href="https://github.com/MaDHouSe79/mh-cooldown/watchers">
+    <img src="https://img.shields.io/github/watchers/MaDHouSe79/mh-cooldown"/> 
   </a> 
-  <a href="https://github.com/MaDHouSe79/mh-parkingV2/network/members">
-    <img src="https://img.shields.io/github/forks/MaDHouSe79/mh-parkingV2"/> 
+  <a href="https://github.com/MaDHouSe79/mh-cooldown/network/members">
+    <img src="https://img.shields.io/github/forks/MaDHouSe79/mh-cooldown"/> 
   </a>  
-  <a href="https://github.com/MaDHouSe79/mh-parkingV2/stargazers">
-    <img src="https://img.shields.io/github/stars/MaDHouSe79/mh-parkingV2?color=white"/> 
+  <a href="https://github.com/MaDHouSe79/mh-cooldown/stargazers">
+    <img src="https://img.shields.io/github/stars/MaDHouSe79/mh-cooldown?color=white"/> 
   </a>
-  <a href="https://github.com/MaDHouSe79/mh-parkingV2/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/MaDHouSe79/mh-parkingV2?color=black"/> 
+  <a href="https://github.com/MaDHouSe79/mh-cooldown/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/MaDHouSe79/mh-cooldown?color=black"/> 
   </a>      
 </p>
 
@@ -33,7 +33,7 @@
 - cooldown scripts or actions for players so they can't spam it or use it in a amount of time.
 - you can implement this in every script, it's a standalone script.
 
-# Example how to use om pther scripts.
+# Example how to use in other scripts.
 ```lua
 local cooldownTimer = 5000 -- 5000 = 5secs..
 local function Test(playerId)
